@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="description" content="Это мой веб-калькулятор"/>
+    <meta property="og:title" content="Калькулятор"/>
+    <meta property="og:description" content="Это мой веб-калькулятор"/>
+    <meta property="og:image" content=""/>
+    <meta property="og:type" content="tool"/>
+    <meta property="og:url" content=""/>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <title>Калькулятор</title>
+</head>
+<body>
+<header><h1 id="app">Калькулятор</h1></header>
+<section>
+    <h2>Состояние калькулятора</h2>
+    <p th:text="'Текущее значение: ' + ${result}"></p>
+</section>
+<section>
+    <form action="#" th:action="@{/calculator}" method="post">
+        <label>
+            <input name="numberToProcess" value="0">
+        </label>
+        <button th:type="submit" name="action" value="plus">+</button>
+        <button th:type="submit" name="action" value="minus">-</button>
+    </form>
+</section>
+</body>
+</html>

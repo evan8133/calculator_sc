@@ -1,0 +1,8 @@
+spring:
+  thymeleaf:
+    cache: false
+    enabled: true
+  application:
+    name: test
+server:
+  port: 8080
